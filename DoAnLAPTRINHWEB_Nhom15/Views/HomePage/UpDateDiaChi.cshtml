@@ -1,0 +1,73 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cập nhật địa chỉ</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
+    <style>
+        .form_Home {
+            border-radius: 5px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            padding: 0 20px;
+            background: #fff;
+            width: 80%;
+            margin: auto;
+        }
+        .form_Home h1{
+            padding:20px;
+            text-align:center;
+            font-size:2rem;
+        }
+        .diachiapi{
+            text-align:center;
+            line-height:4rem;
+        }
+
+        .diachiapi select{
+            width:40rem;
+            padding:10px;
+            border-radius:5px;
+            font-size:1.2rem;
+        }
+            .diachiapi input {
+                width: 40rem;
+                padding: 10px;
+                border-radius: 5px;
+                font-size: 1.2rem;
+                border:1px solid black;
+            }
+            .diachiapi button{
+                width:10rem;
+            }
+    </style>
+</head>
+<body>
+    <div class="containerapi">
+         
+        <form action="/HomePage/UpDateDiaChi" method="post" class="form_Home">
+            <h1>CẬP NHẬT ĐỊA CHỈ</h1>
+            <div class="diachiapi">
+                <select name="" id="province">
+                </select>
+                <select name="" id="district">
+                    <option value="">chọn quận</option>
+                </select>
+                <select name="" id="ward">
+                    <option value="">chọn phường</option>
+                </select>
+                <input type="hidden" id="hiddenResult" name="hiddenResult" />
+                <input type="text" name="duong" value="" placeholder="Số nhà, tên đường" />
+                <button class="btn" type="submit">Cập nhật</button>
+            </div>
+        </form>
+        
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js" integrity="sha512-bPh3uwgU5qEMipS/VOmRqynnMXGGSRv+72H/N260MQeXZIK4PG48401Bsby9Nq5P5fz7hy5UGNmC/W1Z51h2GQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="~/Scripts/getApiDiaChi.js"></script>
+</body>
+</html>

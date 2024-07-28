@@ -1,0 +1,81 @@
+﻿
+@{
+    ViewBag.Title = "DiaChi";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+@using DoAnLAPTRINHWEB_Nhom15.Areas.Admin.Models;
+@model List<DiaChi>
+<style>
+    .main_user {
+    }
+
+    .form_Home {
+        border-radius: 5px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        padding: 0 20px;
+        background: #fff;
+        width: 80%;
+        margin: auto;
+        line-height: 3.5rem;
+    }
+
+        .form_Home button {
+            width: 13rem;
+            margin-left: 20rem;
+        }
+
+    .table_user {
+        margin: auto;
+        width: 90%;
+    }
+
+        .table_user h3 {
+            font-size: 2rem;
+            text-align: center;
+            padding: 1rem 0;
+        }
+    .diachi {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+       
+    }
+    .text {
+        height: 40px;
+        width: 80%;
+        display: flex;
+        align-items: center;
+        float: left;
+        border: 1px solid black;
+        padding: 13px 30px;
+        border-radius: 50px;
+        font-weight: 500;
+        margin-right: 10px;
+    }
+</style>
+
+<div class="main_user">
+        <div class="table_user">
+            <h3> THÔNG TIN ĐỊA CHỈ</h3>
+            <div class=" diachi">
+                <div class="text">
+                    <p><b> Địa Chỉ 1: </b> @ViewBag.DiaChi</p>  
+                </div>
+                <div>
+                    <a class="btn" href="/HomePage/UpDateDiaChi?id=1&text=@ViewBag.DiaChi">Cập nhật</a>
+                </div>
+            </div>
+            <div class="diachi">
+                <div class="text">
+                    <p><b> Địa Chỉ 2: </b> @ViewBag.DiaChi2</p>
+                </div>
+                <div>
+                    <a class="btn" href="/HomePage/UpDateDiaChi?id=2&text=@ViewBag.DiaChi2">Cập nhật</a>
+                </div>
+            </div>
+        </div>
+</div>
+
+
